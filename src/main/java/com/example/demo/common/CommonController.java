@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.common.api.GenericLookUpResponse;
+import com.example.demo.common.api.CommonLookUpResponse;
 
 
 @RestController
-@RequestMapping(value="api/v1/targeting/properties")
+@RequestMapping(value="api/v1/testing/properties")
 public class CommonController {
 
 	private CommonService commonService;
@@ -19,9 +19,9 @@ public class CommonController {
 	}
 
 	@GetMapping("/daterange")
-	public ResponseEntity<GenericLookUpResponse> getDateRange()
+	public ResponseEntity<CommonLookUpResponse> getDateRange()
 	{
-		GenericLookUpResponse employees = commonService.getDateRange();
+		CommonLookUpResponse employees = commonService.getDateRange();
 		return ResponseEntity.ok(employees);
 	}
 }

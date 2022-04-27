@@ -1,8 +1,5 @@
 package com.example.demo.common.api;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,11 +12,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "daterange")
-public class GenericLookUp {
+public class CommonLookUp {
 
-	@Id
 	private String code;
 	private String description;
 }

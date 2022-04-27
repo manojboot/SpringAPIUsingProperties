@@ -9,8 +9,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class GenericLookUpResponse {
+public class CommonLookUpResponse extends CommonResponse{
 
-	private List<GenericLookUp> dateRange;
+	private List<CommonLookUp> dateRange;
 
 }

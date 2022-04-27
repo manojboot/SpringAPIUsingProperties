@@ -1,0 +1,6 @@
+FROM adoptopenjdk/openjdk11:jdk-11.0.2.9-slim
+ADD target/docker-springapiusingproperties.jar docker-springapiusingproperties.jar
+ENV PORT 8181
+EXPOSE 8181
+COPY target/*.jar /opt/app.jar
+ENTRYPOINT ["java","-jar","docker-springapiusingproperties.jar"]
